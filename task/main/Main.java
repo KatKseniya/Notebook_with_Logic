@@ -23,8 +23,10 @@ public class Main {
         db.add(new Note(2, "Text2", "Qwerty content 2 ", new Date("09/06/2021") ));
         db.add(new Note(3, "Text3", "Abcd content 3", new Date() ));
 
-        List <Note> db1 =  test.findByDate(db, new Date("09/06/2021"));
+       List <Note> db1 =  test.findByDate(noteBook.getNotes(), new Date("09/06/2021"));
        NoteBookConsoleView.print(db1);
+
+       NoteBookConsoleView.print(noteBook);
 
     }
 }
